@@ -1,0 +1,7 @@
+#calculate {
+  text-transform: uppercase;
+}
+
+#displayTotal h1 {
+  display: none;
+}
