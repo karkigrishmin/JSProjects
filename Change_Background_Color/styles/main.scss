@@ -3,3 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  button {
+    border: none;
+    background-color: rgb(1, 57, 212);
+    padding: 0.6rem 1rem;
+    color: #fff;
+    border-radius: 20px;
+
+    &:hover {
+      background-color: lighten(rgb(1, 57, 212), 10);
+      cursor: pointer;
+    }
+  }
+}
