@@ -2,3 +2,26 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: blue;
+    button {
+      border: none;
+      padding: 0.7rem 1.5rem;
+      background-color: rgb(4, 104, 235);
+      border-radius: 50px;
+      display: block;
+      margin-top: 1rem;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+      }
+    }
+  }
+}
