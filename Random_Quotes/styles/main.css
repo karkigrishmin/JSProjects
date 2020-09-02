@@ -4,4 +4,34 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+body div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #ccc;
+  width: 50%;
+  height: 50%;
+  padding-top: 2rem;
+}
+
+body div button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body div h2,
+body div h3 {
+  text-align: center;
+  color: #3f3ff1;
+}
+
+body div h2 {
+  text-decoration: underline;
+}
 /*# sourceMappingURL=main.css.map */
