@@ -4,4 +4,89 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+body {
+  color: #fff;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper div {
+  background-color: #333;
+  height: 40%;
+  width: 50%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper div form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper div .msg h3 {
+  margin-bottom: 0.8rem;
+}
+
+form input {
+  margin-top: 1rem;
+}
+
+form #input-field {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border-radius: 20px;
+}
+
+form #submit {
+  background: blue;
+  display: block;
+  padding: 0.5rem 2rem;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+}
+
+#submit:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
 /*# sourceMappingURL=main.css.map */
