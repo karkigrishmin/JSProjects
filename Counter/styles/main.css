@@ -4,4 +4,73 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+body {
+  background-color: #240202;
+  color: #fff;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.container .counter {
+  background-color: #240202;
+  border: 1px solid #fff;
+  padding: 2rem;
+  width: 30%;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.counter h3 {
+  margin-top: 1rem;
+  font-size: 5rem;
+}
+
+.counter .control-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.counter .control-count button {
+  border: none;
+  background-color: beige;
+  color: #3a3636;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 50px;
+}
+
+.counter .control-count button:hover {
+  cursor: pointer;
+  background-color: azure;
+}
 /*# sourceMappingURL=main.css.map */

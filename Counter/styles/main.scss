@@ -3,3 +3,53 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: rgb(36, 2, 2);
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  .counter {
+    background-color: rgb(36, 2, 2);
+    border: 1px solid #fff;
+    padding: 2rem;
+    width: 30%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.counter {
+  h3 {
+    margin-top: 1rem;
+    font-size: 5rem;
+  }
+  .control-count {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2rem;
+
+    button {
+      border: none;
+      background-color: beige;
+      color: rgb(58, 54, 54);
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      border-radius: 50px;
+      &:hover {
+        cursor: pointer;
+        background-color: azure;
+      }
+    }
+  }
+}
