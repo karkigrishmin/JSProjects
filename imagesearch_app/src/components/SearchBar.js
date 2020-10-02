@@ -1,14 +1,10 @@
 import React from "react";
 
-const SearchBar = ({ change }) => {
-  const submitHandler = (e) => {
-    e.preventDefault();
-  };
-
+const SearchBar = ({ change, submitSearch, inputValue }) => {
   return (
     <div>
-      <form onSubmit={submitHandler}>
-        <input type="text" onChange={change} />
+      <form onSubmit={submitSearch}>
+        <input type="text" onChange={change} value={inputValue} />
         <input type="submit" value="Search" />
       </form>
     </div>

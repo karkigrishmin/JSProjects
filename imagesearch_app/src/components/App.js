@@ -11,11 +11,25 @@ class App extends React.Component {
     this.setState({ searchTerm: e.target.value });
   };
 
+  submitHandler = (e) => {
+    e.preventDefault();
+    this.getInputValue(this.state.searchTerm);
+    this.setState({ searchTerm: "" });
+  };
+
+  getInputValue = (inputValue) => {
+    console.log(inputValue);
+  };
+
   render() {
     return (
       <div>
         App:- {this.state.searchTerm}
-        <SearchBar change={this.inputHandler} />
+        <SearchBar
+          change={this.inputHandler}
+          submitSearch={this.submitHandler}
+          inputValue={this.state.searchTerm}
+        />
       </div>
     );
   }
