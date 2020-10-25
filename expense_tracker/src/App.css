@@ -1,0 +1,17 @@
+ul {
+  list-style-type: none;
+}
+
+li {
+  width: 20%;
+  background: #ccc;
+  margin-bottom: 0.8rem;
+}
+
+.plus {
+  border-right: 5px solid green;
+}
+
+.minus {
+  border-right: 5px solid red;
+}
