@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { GlobalContext } from "../context/GlobalState";
 
 export function AddTransaction() {
   const [text, setText] = useState("");
-  const [amt, setAmt] = useState(0);
+  const [amount, setAmount] = useState(0);
+
+  const { addTransaction } = useContext(GlobalContext);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const newTransaction = {
+      id: Math.floor(Math.random() * 100),
+      text,
+      // input amount is string so parsing it to number, we can use parseInt() too
+      amount: +amount,
+    };
+
+    addTransaction(newTransaction);
+  };
 
   return (
     <div className="add-transaction">
-      <div className="text-field">
+      <form onSubmit={onSubmit}>
         <label htmlFor="text">Text:</label>
         <input
           type="text"
@@ -14,17 +29,16 @@ export function AddTransaction() {
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-      </div>
-      <div className="amt-field">
+
         <label htmlFor="amt">Amount:</label>
         <input
           id="amt"
           type="number"
-          value={amt}
-          onChange={(e) => setAmt(e.target.value)}
+          value={amount}
+          onChange={(e) => setAmount(e.target.value)}
         />
-      </div>
-      <button>Add transaction</button>
+        <button>Add transaction</button>
+      </form>
     </div>
   );
 }
