@@ -1,5 +1,17 @@
 import React, { useContext, useState } from "react";
+import styled from "styled-components";
 import { GlobalContext } from "../context/GlobalState";
+
+const FormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+`;
+
+const Button = styled.button`
+  margin-top: 0.8rem;
+`;
 
 export function AddTransaction() {
   const [text, setText] = useState("");
@@ -16,28 +28,32 @@ export function AddTransaction() {
       amount: +amount,
     };
 
-    addTransaction(newTransaction);
+    if (text !== "" && amount !== "") {
+      addTransaction(newTransaction);
+    }
   };
 
   return (
     <div className="add-transaction">
       <form onSubmit={onSubmit}>
-        <label htmlFor="text">Text:</label>
-        <input
-          type="text"
-          id="text"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
+        <FormWrapper>
+          <label htmlFor="text">Text:</label>
+          <input
+            type="text"
+            id="text"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
 
-        <label htmlFor="amt">Amount:</label>
-        <input
-          id="amt"
-          type="number"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-        />
-        <button>Add transaction</button>
+          <label htmlFor="amt">Amount:</label>
+          <input
+            id="amt"
+            type="number"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+          />
+          <Button>Add transaction</Button>
+        </FormWrapper>
       </form>
     </div>
   );

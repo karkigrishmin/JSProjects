@@ -8,7 +8,7 @@ export function TransactionList() {
 
   return (
     <div className="history">
-      <h6>History</h6>
+      <h4>History</h4>
       <ul>
         {transactions.map((transaction) => (
           <Transaction

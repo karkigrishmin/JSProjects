@@ -1,5 +1,15 @@
 import React, { useContext } from "react";
+import styled from "styled-components";
 import { GlobalContext } from "../context/GlobalState";
+
+const BalanceContainer = styled.div`
+  background: #ccc;
+  width: 20%;
+`;
+
+const BalanceHeader = styled.h4`
+  margin-bottom: 0;
+`;
 
 export function Balance() {
   const { transactions } = useContext(GlobalContext);
@@ -11,11 +21,9 @@ export function Balance() {
   console.log(total);
 
   return (
-    <div className="text">
-      <h6>Your Balance</h6>
-      <div className="amt">
-        <p>Rs{total}</p>
-      </div>
-    </div>
+    <BalanceContainer>
+      <BalanceHeader>Your Balance</BalanceHeader>
+      <span>Rs{total}</span>
+    </BalanceContainer>
   );
 }

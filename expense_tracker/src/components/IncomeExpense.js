@@ -1,5 +1,27 @@
 import React, { useContext } from "react";
+import styled from "styled-components";
 import { GlobalContext } from "../context/GlobalState";
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
+const StyledIncome = styled.div`
+  color: green;
+`;
+
+const StyledExpense = styled.div`
+  color: red;
+`;
+
+const IncomeHeader = styled.h4`
+  margin-bottom: 0;
+`;
+
+const ExpenseHeader = styled.h4`
+  margin-bottom: 0;
+`;
 
 export function IncomeExpense() {
   const { transactions } = useContext(GlobalContext);
@@ -16,19 +38,15 @@ export function IncomeExpense() {
     -(1).toFixed(2);
 
   return (
-    <div className="income-expense">
-      <div className="income">
-        <h6>Income</h6>
-        <div className="amt">
-          <p>Rs{income}</p>
-        </div>
-      </div>
-      <div className="expense">
-        <h6>Expense</h6>
-        <div className="amt">
-          <p>Rs{expense}</p>
-        </div>
-      </div>
-    </div>
+    <Wrapper>
+      <StyledIncome>
+        <IncomeHeader>Income</IncomeHeader>
+        <span>Rs {income}</span>
+      </StyledIncome>
+      <StyledExpense>
+        <ExpenseHeader>Expense</ExpenseHeader>
+        <span>Rs {expense}</span>
+      </StyledExpense>
+    </Wrapper>
   );
 }
