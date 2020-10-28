@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Recipe } from "./Recipe";
 import "./App.css";
 
 function App() {
@@ -15,7 +16,6 @@ function App() {
     );
     const data = await response.json();
     setRecipes(data.hits);
-    console.log(data);
   };
 
   return (
@@ -24,6 +24,13 @@ function App() {
         <input type="text" />
         <button type="submit">Search</button>
       </form>
+      {recipes.map((recipe) => (
+        <Recipe
+          title={recipe.recipe.label}
+          calories={recipe.recipe.calories}
+          image={recipe.recipe.image}
+        />
+      ))}
     </div>
   );
 }
